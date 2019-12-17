@@ -1,0 +1,95 @@
+/* ===================================== 
+   Page Styles
+======================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+.main-header{
+  display: inline-flex;
+  width:100%;
+}
+
+body {
+	font-size: 1.4em;
+	font-family: 'Varela Round', sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+h1{
+  font-size: 1em;
+  color:white;
+  flex-grow: 1;
+}
+h2{
+  width:90%;
+}
+#bellIcon{
+  width: 25px;
+  margin-right: 6.5px;
+  margin-left: 6.5px;
+  margin-top: 10px;
+}
+svg#Layer_1{
+  margin-top: 50%;
+}
+.profilePic{
+  border-radius: 50%;
+  height: 3em;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.traffic-header{
+  display: flex;
+}
+.traffic-nav{
+  display: inline-flex;
+}
+h3{
+  font-size:0.75em;
+  color:black;
+  margin:13px;
+  width: fit-content;
+}
+#navIcon{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.social-container{
+  display:flex;
+  width:fit-content;
+}
+img#socialIcon{
+  width: 60px;
+}
+.grid-container > * {
+  color: black;
+  text-shadow: 0 2px 0 rgba(110,133,156,0.12);
+  padding: 0.85em;
+  border: solid 1px rgba(110,133,156,0.15);
+}
+header {
+  background-color: rgb(103, 37, 189);
+  display:flex;
+}
+nav {
+  background-color: rgb(59, 10, 122);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main {
+  background-color: white;  
+}
+aside {
+  background-color: #6ad78a; 
+}
+footer {
+  background-color: #6e859c;
+}
+

@@ -1,0 +1,122 @@
+/* ===================================== 
+   Grid Layout
+======================================== */
+header{
+  grid-area: header;
+}
+nav{
+  grid-area: nav;
+}
+main{
+  grid-area: main;
+}
+
+dashboard{
+  grid-area: dashboard;
+  display: flex;
+  flex-wrap: wrap;
+}
+.alert-banner,.alert{
+  display: flex;
+  background-color: red;
+  border-radius: 25px;
+  width: 100%;
+}
+.alert-banner-close{
+  margin-right: 20px;
+}
+.alertText{
+  flex-grow: 1;
+}
+traffic{
+  grid-area: traffic;
+}
+dailyTraffic{
+  grid-area: dailyTraffic;
+}
+mobileUsers{
+  grid-area: mobileUsers;
+}
+socialStats{
+  grid-area: socialStats;
+  display: flex;
+  justify-content: space-evenly;
+}
+newMembers{
+  grid-area: newMembers;
+}
+recentActivity{
+  grid-area: recentActivity;
+}
+messageUser{
+  grid-area: messageUser;
+}
+settings{
+  grid-area: settings;
+}
+
+.widget-container-full, .widget-container-half {
+  width: 95vw;
+}
+
+.grid-container {
+  display:grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "header"
+  "nav"
+  "main";
+  }
+  .dashboard{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(150px,auto);
+    grid-template-areas: 
+      "dashboard"
+      "traffic"
+      "dailyTraffic"
+      "mobileUsers"
+      "socialStats"
+      "newMembers"
+      "recentActivity"
+      "messageUser"
+      "settings";
+  }
+
+  @media(min-width:768px){
+    .grid-container {
+      grid-template-columns: 55px 1fr;
+      grid-template-areas:
+      "header header"
+      "nav main";
+    }
+    .dashboard{
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: minmax(150px,auto);
+      grid-template-areas: 
+        "dashboard dashboard"
+        "traffic traffic"
+        "dailyTraffic mobileUsers"
+        "socialStats socialStats"
+        "newMembers recentActivity"
+        "messageUser settings";
+    }
+    .widget-container-full {
+      width: 90vw;
+    }
+    .widget-container-half{
+      width: 45vw;
+    }
+      
+  }
+  
+  @media(min-width:968px){
+    .grid-container{
+      grid-template-areas: 
+        "header header header" 
+        "nav main main"
+        "nav main main"
+    }
+  }
+  

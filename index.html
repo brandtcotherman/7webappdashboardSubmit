@@ -1,0 +1,191 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+     <title>CSS Grid Layout</title>
+      <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+     <link href="css/page.css" rel="stylesheet">
+     <link href="css/grid.css" rel="stylesheet">
+     <link href="css/toggle-switch.css" rel="stylesheet">
+   </head>
+   <body>
+     <div class="grid-container">
+       <header>
+           <h1>AppName</h1>
+           <div id="bellIcon">
+                <?xml version="1.0" encoding="utf-8"?>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#FFFFFF;}
+                </style>
+                <g id="_x36__6_">
+                    <g>
+                        <path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
+                            c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/>
+                    </g>
+                </g>
+                </svg>
+                <div class="container" id="notifications">
+                    <!-- div#notifications (container element for our notifications) -->
+                </div>
+           </div>
+            <img src="images/member-1.jpg" alt="Profile Picture" class="profilePic">
+            <h3 style="color:white">Josh Sulli</h3>
+       </header>
+
+       <nav>    <!-- SVG icon based navigation with: Dashboard, Members, Visits, and Settings.  -->
+        <a href="https://www.homedepot.com/"><img src="icons/icon-dashboard.svg"id="navIcon"></a>
+        <a href="https://www.samsclub.com/sams/pagedetails/content.jsp?pageName=aboutSams" ><img src="icons/icon-members.svg" id="navIcon"></a>
+        <a href="https://www.visitindy.com/" ><img src="icons/icon-visits.svg" id="navIcon"></a>
+        <a href="https://developer.android.com/guide/topics/ui/settings" ><img src="icons/icon-settings.svg" id="navIcon"></a>
+       </nav>
+
+       <main> <!-- Main content area where the specific dashboard widgets will go. -->
+        <div class="dashboard">
+          <dashboard>
+            <div class="main-header">
+                <h2 class="headline">Dashboard</h2>
+                <div class="main-header-search">
+                  <input type="search" placeholder="Search..." />
+                </div>
+            </div>
+
+            <div class="alert" id="alert" ><!-- alert banner -->
+              <!-- JS will insert alert here -->
+            </div>
+          </dashboard>
+
+          <traffic> 
+            <section class="traffic">
+              <div class="traffic-header">
+                <h3>Traffic</h3>
+                <ul class="traffic-nav">
+                  <li class="traffic-nav-link">Hourly</li>
+                  <li class="traffic-nav-link">Daily</li>
+                  <li class="traffic-nav-link active">Weekly</li>
+                  <li class="traffic-nav-link">Monthly</li>
+                </ul>
+              </div>
+              <div class="widget-container-full">
+                <!-- element line graph will attach to -->
+                <canvas id="traffic-chart"></canvas>
+              </div>
+
+            </section>
+          </traffic>
+
+          <dailyTraffic>
+            <section class="daily">
+              <h3>Daily Traffic</h3>
+              <div class="widget-container-half">
+                <!-- element bar graph will attach to -->
+                <canvas id="daily-chart"></canvas>
+              </div>
+            </section>
+          </dailyTraffic>
+
+          <mobileUsers><p>Mobile Users (2 columns)</p></mobileUsers>
+
+          <socialStats>
+            <div class="social-container">
+              <div class="social-image">
+                <img src="icons/icon-twitter.svg"id="socialIcon">
+              </div>
+              <div class="social-text">
+                <p>Twitter</p>
+                <p>10,345</p>
+              </div>
+            </div>
+            <div class="social-container">
+                <div class="social-image">
+                    <img src="icons/icon-facebook.svg"id="socialIcon">
+                  </div>
+                  <div class="social-text">
+                    <p>Facebook</p>
+                    <p>3,345</p>
+                  </div>
+            </div>
+            <div class="social-container">
+                <div class="social-image">
+                    <img src="icons/icon-google-plus.svg"id="socialIcon">
+                  </div>
+                  <div class="social-text">
+                    <p>Google</p>
+                    <p>9,345</p>
+                  </div>
+            </div>
+          </socialStats>
+
+          <newMembers>
+            <section class="members">
+                <h3>New Members</h3>
+                <div class="members-container">
+                  <img src="images/member-2.jpg" class="profile-image">
+                <div class="members-text">
+                  <p>Victoria Chambers</p>
+                  <a href="#">victoria.chambers80@example.com</a>
+                </div>
+                <p>10/15/15</p>
+              </div>
+            </section>                  
+          </newMembers>
+
+          <recentActivity><p>Recent Activity (2 columns)</p></recentActivity>
+
+          <messageUser>
+            <section class="message">
+              <h3>Message User</h3>
+              <form class="widget-container">
+                  <input type="text" placeholder="Search for user" class="form-field" id="userField">
+                  <textarea placeholder="Message for user" class="form-area" id= "messageField" ></textarea>
+                  <button class="button-primary" id="send" >Send</button>
+              </form>
+            </section>
+          </messageUser>
+
+          <settings>
+            <section class="settings">
+              <h3>Settings</h3>
+
+              <label class="switch-light switch-material">
+                  <input type="checkbox">
+                  <strong class="large-4 columns">
+                      Send Email Notifications
+                  </strong>
+                  <span class="large-4 columns float-left">
+                    <span>Off</span>
+                    <span>On</span>
+                    <a></a>
+                  </span>
+              </label>
+
+              <label class="switch-light switch-material">
+                  <input type="checkbox">
+                  <strong class="large-4 columns">
+                      Set Profile to Public
+                  </strong>
+                  <span class="large-4 columns float-left">
+                    <span>Off</span>
+                    <span>On</span>
+                    <a></a>
+                  </span>
+              </label>
+              
+              <select class="form-field" id="timezone">
+                <option disabled selected>Select a Timezone</option>
+                <option>Eastern</option>
+                <!-- more options -->
+              </select>
+              <div class="settings-button" >
+                <button class="button-primary" id="save">Save</button>
+                <button class="button-disabled" id="cancel">Cancel</button>
+              </div>
+            </section>
+          </settings>
+
+        </div>
+       </main>    
+     </div>
+     <script src="js/alert.js"></script>
+     <script src="js/chartwidgets.js"></script>
+   </body>
+ </html>
