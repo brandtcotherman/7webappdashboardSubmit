@@ -84,6 +84,9 @@ svg#Layer_1{
   border: 2px solid white;
   background-color: white;
 }
+.h3Traffic{
+  flex-grow:1;
+}
 h3{
   font-size:0.75em;
   color:black;

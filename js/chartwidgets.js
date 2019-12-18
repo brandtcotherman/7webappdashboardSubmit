@@ -60,28 +60,58 @@ let trafficOptions = {
 
 
 var chartData = hourlyData;//click button that changes chartData
-var btn_chart = document.querySelectorAll('.traffic-nav');//Get the element with a class of btn__reset and save it to a variable
 
-btn_chart.addEventListener('click', (e) => { //Attach an event listener to the “Start Game” button to hide the start screen overlay.
-    //document.btn_chart.style.backgroundColor = "green";
-
-    btn_pressed=btn_chart.textContent;
-
-    if (btn_pressed="Hourly"){chartData=monthlyData;}
-    if (btn_pressed="Daily"){chartData=weeklyData;}
-    if (btn_pressed="Weekly"){chartData=dailyData1;}
-    if (btn_pressed="Monthly"){chartData=hourlyData;}
-    
-    console.log("Button Pressed: "+ btn_chart.textContent);
+var ul = document.getElementById('trafficUl');//Get the element with a class of btn__reset and save it to a variable
+var items = ul.getElementsByTagName("li");
+for (var i = 0; i < items.length; ++i) {
+    console.log("for looping:"+ items[i].textContent);
+    items[0].style.backgroundColor = "green";
+}
+items[0].addEventListener('click', (e) => { 
+    console.log("Button Pressed: "+ items[0].textContent);
+    items[0].style.backgroundColor = "green";
+    items[1].style.backgroundColor = "white";
+    items[2].style.backgroundColor = "white";
+    items[3].style.backgroundColor = "white";
+    chartData=hourlyData;
+    updateChart();
+});
+items[1].addEventListener('click', (e) => { 
+    console.log("Button Pressed: "+ items[1].textContent);
+    items[0].style.backgroundColor = "white";
+    items[1].style.backgroundColor = "green";
+    items[2].style.backgroundColor = "white";
+    items[3].style.backgroundColor = "white";
+    chartData=dailyData1;
+    updateChart();
+});
+items[2].addEventListener('click', (e) => { 
+    console.log("Button Pressed: "+ items[2].textContent);
+    items[0].style.backgroundColor = "white";
+    items[1].style.backgroundColor = "white";
+    items[2].style.backgroundColor = "green";
+    items[3].style.backgroundColor = "white";
+    chartData=weeklyData;
+    updateChart();
+});
+items[3].addEventListener('click', (e) => { 
+    console.log("Button Pressed: "+ items[3].textContent);
+    items[0].style.backgroundColor = "white";
+    items[1].style.backgroundColor = "white";
+    items[2].style.backgroundColor = "white";
+    items[3].style.backgroundColor = "green";
+    chartData=monthlyData;
+    updateChart();
 });
 
-let trafficChart = new Chart(trafficCanvas, {
-    type: 'line',
-    data: chartData,
-    options: trafficOptions
-});
-
-
+function updateChart(){
+    let trafficChart = new Chart(trafficCanvas, {
+        type: 'line',
+        data: chartData,
+        options: trafficOptions
+    });
+}
+updateChart();
 
 const dailyCanvas = document.getElementById("daily-chart");
 
