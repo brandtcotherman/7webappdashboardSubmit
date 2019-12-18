@@ -1,4 +1,4 @@
-//var trafficCanvas=document.getElementById("traffic-chart");//Store the canvas element with the id of “traffic-chart” in a variable named trafficCanvas.
+var trafficCanvas=document.getElementById("traffic-chart");//Store the canvas element with the id of “traffic-chart” in a variable named trafficCanvas.
 
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
@@ -34,7 +34,8 @@ let trafficChart = new Chart(trafficCanvas, {
     options: trafficOptions
 });
 
-/*
+
+
 const dailyCanvas = document.getElementById("daily-chart");
 
 // data for daily traffic bar chart
@@ -66,7 +67,9 @@ let dailyChart = new Chart(dailyCanvas, {
     data: dailyData,
     options: dailyOptions
 });
-   
+
+
+
 const mobileCanvas = document.getElementById("mobile-chart");
 
 const mobileData = {
@@ -97,5 +100,3 @@ let mobileChart = new Chart(mobileCanvas, {
     data: mobileData,
     options: mobileOptions
 });
-    
-    */

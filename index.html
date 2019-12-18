@@ -41,11 +41,13 @@
 
        <main> <!-- Main content area where the specific dashboard widgets will go. -->
         <div class="dashboard">
-          <dashboard>
+          <dashboard class="gridPartDash">
             <div class="main-header">
                 <h2 class="headline">Dashboard</h2>
-                <div class="main-header-search">
-                  <input type="search" placeholder="Search..." />
+                <div class="boxaroundsearch">
+                  <div class="main-header-search">
+                    <input type="search" class="form-field" placeholder="Search..." />
+                  </div>
                 </div>
             </div>
 
@@ -54,7 +56,7 @@
             </div>
           </dashboard>
 
-          <traffic> 
+          <traffic class="gridPartTraffic"> 
             <section class="traffic">
               <div class="traffic-header">
                 <h3>Traffic</h3>
@@ -73,7 +75,7 @@
             </section>
           </traffic>
 
-          <dailyTraffic>
+          <dailyTraffic class="gridPart">
             <section class="daily">
               <h3>Daily Traffic</h3>
               <div class="widget-container-half">
@@ -83,55 +85,127 @@
             </section>
           </dailyTraffic>
 
-          <mobileUsers><p>Mobile Users (2 columns)</p></mobileUsers>
+          <mobileUsers class="gridPart">
+              <section class="daily">
+                  <h3>Mobile Users</h3>
+                  <div class="widget-container-half">
+                    <!-- element bar graph will attach to -->
+                    <canvas id="mobile-chart"></canvas>
+                  </div>
+                </section>
+          </mobileUsers>
 
-          <socialStats>
-            <div class="social-container">
-              <div class="social-image">
-                <img src="icons/icon-twitter.svg"id="socialIcon">
-              </div>
-              <div class="social-text">
-                <p>Twitter</p>
-                <p>10,345</p>
-              </div>
-            </div>
-            <div class="social-container">
+          <socialStats class="gridPart">
+            <h3>Social Stats</h3>
+            <div class="contains-socials">
+              <div class="social-container">
                 <div class="social-image">
-                    <img src="icons/icon-facebook.svg"id="socialIcon">
-                  </div>
-                  <div class="social-text">
-                    <p>Facebook</p>
-                    <p>3,345</p>
-                  </div>
-            </div>
-            <div class="social-container">
-                <div class="social-image">
-                    <img src="icons/icon-google-plus.svg"id="socialIcon">
-                  </div>
-                  <div class="social-text">
-                    <p>Google</p>
-                    <p>9,345</p>
-                  </div>
+                  <img src="icons/icon-twitter.svg"id="socialIcon">
+                </div>
+                <div class="social-text">
+                  <p class="social-name">Twitter</p>
+                  <p>10,345</p>
+                </div>
+              </div>
+              <div class="social-container">
+                  <div class="social-image">
+                      <img src="icons/icon-facebook.svg"id="socialIcon">
+                    </div>
+                    <div class="social-text">
+                      <p class="social-name">Facebook</p>
+                      <p>3,345</p>
+                    </div>
+              </div>
+              <div class="social-container">
+                  <div class="social-image">
+                      <img src="icons/icon-google-plus.svg"id="socialIcon">
+                    </div>
+                    <div class="social-text">
+                      <p class="social-name">Google</p>
+                      <p>9,345</p>
+                    </div>
+              </div>
             </div>
           </socialStats>
 
-          <newMembers>
+          <newMembers class="gridPart">
             <section class="members">
                 <h3>New Members</h3>
                 <div class="members-container">
-                  <img src="images/member-2.jpg" class="profile-image">
+                  <img src="images/member-1.jpg" class="profilePic">
                 <div class="members-text">
                   <p>Victoria Chambers</p>
-                  <a href="#">victoria.chambers80@example.com</a>
+                  <a href="#">victoria.c@gmail.com</a>
                 </div>
-                <p>10/15/15</p>
+                <p class="date">10/15/15</p>
+              </div>
+              <div class="members-container">
+                  <img src="images/member-2.jpg" class="profilePic">
+                <div class="members-text">
+                  <p>Victor Wins</p>
+                  <a href="#">man.why@gmail.com</a>
+                </div>
+                <p class="date">10/15/15</p>
+              </div>
+              <div class="members-container">
+                  <img src="images/member-3.jpg" class="profilePic">
+                <div class="members-text">
+                  <p>Alex Jones</p>
+                  <a href="#">john.good@gmail.com</a>
+                </div>
+                <p class="date">09/11/11</p>
+              </div>
+              <div class="members-container">
+                  <img src="images/member-4.jpg" class="profilePic">
+                <div class="members-text">
+                  <p>Kim Gumball</p>
+                  <a href="#">buyback.b@gmail.com</a>
+                </div>
+                <p class="date">10/14/17</p>
               </div>
             </section>                  
           </newMembers>
 
-          <recentActivity><p>Recent Activity (2 columns)</p></recentActivity>
+          <recentActivity class="gridPart">
+              <section class="members">
+                  <h3>Recent Activity</h3>
+                  <div class="members-container">
+                    <img src="images/member-4.jpg" class="profilePic">
+                  <div class="members-text">
+                    <p>Gumby Clayton Liked the cat pix</p>
+                    <a>10 hours ago</a>
+                  </div>
+                  <p class="arrow">></p>
+                </div>
+                <div class="members-container">
+                    <img src="images/member-3.jpg" class="profilePic">
+                  <div class="members-text">
+                    <p>Joe Jim Loved the turtle pix</p>
+                    <a>300 years ago</a>
+                  </div>
+                  <p class="arrow">></p>
+                </div>
+                <div class="members-container">
+                    <img src="images/member-2.jpg" class="profilePic">
+                  <div class="members-text">
+                    <p>Jim Jones Drank the kool-aid</p>
+                    <a>10 years ago</a>
+                  </div>
+                  <p class="arrow">></p>
+                </div>
+                <div class="members-container">
+                    <img src="images/member-1.jpg" class="profilePic">
+                  <div class="members-text">
+                    <p>Peter Parker Took pic of spiderman</p>
+                    <a>2 min ago</a>
+                  </div>
+                  <p class="arrow">></p>
+                </div>
+              </section>
+          
+          </recentActivity>
 
-          <messageUser>
+          <messageUser class="gridPart">
             <section class="message">
               <h3>Message User</h3>
               <form class="widget-container">
@@ -142,7 +216,7 @@
             </section>
           </messageUser>
 
-          <settings>
+          <settings class="gridPart">
             <section class="settings">
               <h3>Settings</h3>
 
@@ -186,6 +260,8 @@
        </main>    
      </div>
      <script src="js/alert.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
      <script src="js/chartwidgets.js"></script>
+     <script src="js/messaging.js"></script>
    </body>
  </html>

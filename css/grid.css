@@ -3,12 +3,19 @@
 ======================================== */
 header{
   grid-area: header;
+  background-color: rgb(103, 37, 189);
+  display:flex;
 }
 nav{
   grid-area: nav;
+  background-color: rgb(59, 10, 122);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 main{
   grid-area: main;
+  background-color: white;
 }
 
 dashboard{
@@ -18,15 +25,20 @@ dashboard{
 }
 .alert-banner,.alert{
   display: flex;
-  background-color: red;
-  border-radius: 25px;
+  background-color: rgb(103, 37, 189);
+  border-radius: 10px;
   width: 100%;
+  margin-left:2%;
+  margin-right:2%;
+  margin-top: 1%;
 }
 .alert-banner-close{
   margin-right: 20px;
+  color:white;
 }
 .alertText{
   flex-grow: 1;
+  color:white;
 }
 traffic{
   grid-area: traffic;
@@ -39,8 +51,6 @@ mobileUsers{
 }
 socialStats{
   grid-area: socialStats;
-  display: flex;
-  justify-content: space-evenly;
 }
 newMembers{
   grid-area: newMembers;
@@ -102,6 +112,9 @@ settings{
         "newMembers recentActivity"
         "messageUser settings";
     }
+    nav{
+      display:block;
+    }
     .widget-container-full {
       width: 90vw;
     }
@@ -120,3 +133,5 @@ settings{
     }
   }
   
+
+ 
