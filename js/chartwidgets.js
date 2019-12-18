@@ -58,14 +58,21 @@ let trafficOptions = {
     }
 };
 
-//click button that changes chartData
-var chartData = hourlyData;
-var btn_chart = document.querySelector('.traffic-nav-link');//Get the element with a class of btn__reset and save it to a variable
+
+var chartData = hourlyData;//click button that changes chartData
+var btn_chart = document.querySelectorAll('.traffic-nav');//Get the element with a class of btn__reset and save it to a variable
 
 btn_chart.addEventListener('click', (e) => { //Attach an event listener to the “Start Game” button to hide the start screen overlay.
     //document.btn_chart.style.backgroundColor = "green";
-    //btn_chart = chartData;
-    console.log("Button Pressed: "+ btn_chart);
+
+    btn_pressed=btn_chart.textContent;
+
+    if (btn_pressed="Hourly"){chartData=monthlyData;}
+    if (btn_pressed="Daily"){chartData=weeklyData;}
+    if (btn_pressed="Weekly"){chartData=dailyData1;}
+    if (btn_pressed="Monthly"){chartData=hourlyData;}
+    
+    console.log("Button Pressed: "+ btn_chart.textContent);
 });
 
 let trafficChart = new Chart(trafficCanvas, {
