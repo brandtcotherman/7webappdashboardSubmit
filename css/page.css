@@ -77,7 +77,7 @@ svg#Layer_1{
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  flex-grow: .1;
 }
 .traffic-nav-link{
   border-radius: 10px;
@@ -85,7 +85,7 @@ svg#Layer_1{
   background-color: white;
 }
 .h3Traffic{
-  flex-grow:1;
+  flex-grow:0.7;
 }
 h3{
   font-size:0.75em;
