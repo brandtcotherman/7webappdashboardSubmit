@@ -1,10 +1,40 @@
 var trafficCanvas=document.getElementById("traffic-chart");//Store the canvas element with the id of “traffic-chart” in a variable named trafficCanvas.
 
-let trafficData = {
+let hourlyData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
     "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
     data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
+    2500],
+    backgroundColor: 'rgba(116, 119, 191, .3)',
+    borderWidth: 1,
+    }]
+};
+let dailyData1 = {
+    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
+    "4-10", "11-17", "18-24", "25-31"],
+    datasets: [{
+    data: [250, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200,
+    1300],
+    backgroundColor: 'rgba(116, 119, 191, .3)',
+    borderWidth: 1,
+    }]
+};
+let weeklyData = {
+    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
+    "4-10", "11-17", "18-24", "25-31"],
+    datasets: [{
+    data: [200, 400, 1000, 3000, 2500, 2000, 100, 99, 101, 150,
+    9],
+    backgroundColor: 'rgba(116, 119, 191, .3)',
+    borderWidth: 1,
+    }]
+};
+let monthlyData = {
+    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
+    "4-10", "11-17", "18-24", "25-31"],
+    datasets: [{
+    data: [100, 800, 900, 1000, 1500, 1200, 1250, 1700, 2000, 3000,
     2500],
     backgroundColor: 'rgba(116, 119, 191, .3)',
     borderWidth: 1,
@@ -27,10 +57,20 @@ let trafficOptions = {
     display: false
     }
 };
-    
+
+//click button that changes chartData
+var chartData = hourlyData;
+var btn_chart = document.querySelector('.traffic-nav-link');//Get the element with a class of btn__reset and save it to a variable
+
+btn_chart.addEventListener('click', (e) => { //Attach an event listener to the “Start Game” button to hide the start screen overlay.
+    //document.btn_chart.style.backgroundColor = "green";
+    //btn_chart = chartData;
+    console.log("Button Pressed: "+ btn_chart);
+});
+
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
-    data: trafficData,
+    data: chartData,
     options: trafficOptions
 });
 

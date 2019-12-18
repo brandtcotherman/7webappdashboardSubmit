@@ -69,7 +69,15 @@ svg#Layer_1{
   display: flex;
 }
 .traffic-nav{
-  display: inline-flex;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+.traffic-nav-link{
+  border-radius: 10px;
+  border: 2px solid white;
+  background-color: white;
 }
 h3{
   font-size:0.75em;
