@@ -123,7 +123,7 @@ h3{
   justify-content: center;
   background-color: rgb(103, 37, 189);
 }
-img#socialIcon{
+.socialIcon{
   width: 60px;
 }
 .social-name{
